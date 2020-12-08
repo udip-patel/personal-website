@@ -1,6 +1,19 @@
 # Personal Website - v3
 
-simple vue app 
+VueJS SPA which uses:
+
+- particles.js
+- typed.js
+- pose animation lib (popmotion)
+- bootstrap
+- font awesome
+
+
+Page is made up of 4 vue components:
+- Hero Unit
+- Tools Unit
+- Projects Unit
+- Footer
 
 ## Project setup
 ```

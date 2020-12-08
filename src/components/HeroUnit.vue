@@ -5,7 +5,10 @@
     <div class="d-flex flex-column">
       <div class="row mx-auto">
         <div class="alert alert-info transparent-1 shadow">
-          <h1>Hi there, I am <b>{{name}}</b>, a {{title}}</h1>
+            <div id='typed-source-string'>
+              <p>Hi there, I am <b>{{name}}</b>, a {{title}}.</p>
+            </div>
+                        <h1 id='typed-content'></h1>
         </div>
       </div>
       <div class="row mx-auto">
@@ -34,6 +37,7 @@
 
 <script>
   import "particles.js";
+  import Typed from 'typed.js'
 
   export default {
     name: "HeroUnit",
@@ -42,9 +46,17 @@
       window.particlesJS.load(
         "particles-bg",
         "/assets/particles-data.json",
-        null
-      );
+        null        
+      );      
     },
+    /* need to use mounted for any references to the compiled template ex. access DOM elements by id or class */
+    mounted: function(){
+      new Typed('#typed-content', {
+        stringsElement: '#typed-source-string',
+        showCursor: false,
+        typeSpeed: 29,
+      });
+    }
   };
 </script>
 
@@ -57,7 +69,7 @@
       height: 27em !important;
     }
     @media (max-width: 450px) {
-      height: 29em !important;
+      height: 30em !important;
     }
   }
 
