@@ -1,14 +1,16 @@
 <template>
   <HeroUnit name="Udip Patel" title="Software Developer" linkedinURL="https://www.linkedin.com/in/udippatel/" githubURL="https://github.com/udip-patel" email="patel.udip@gmail.com"></HeroUnit>
+  <ToolsUnit></ToolsUnit>
 </template>
 
 <script>
 import HeroUnit from './components/HeroUnit.vue'
+import ToolsUnit from './components/ToolsUnit.vue'
 
 export default {
   name: 'App',
   components: {
-    HeroUnit
+    HeroUnit, ToolsUnit
   }
 }
 </script>
@@ -16,14 +18,18 @@ export default {
 <style>
 body{
   margin:0px;
-  background: black !important;
+  background: #242424 !important;
+}
+
+.panel-bg{
+  background: #171717 !important;
+  border: solid 0.25px #454545;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 

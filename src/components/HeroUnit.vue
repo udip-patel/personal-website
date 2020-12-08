@@ -6,16 +6,13 @@
       <div class="row mx-auto">
         <div class="alert alert-info transparent-1 shadow">
             <div id='typed-source-string'>
-              <p>Hi there, I am <b>{{name}}</b>, a {{title}}.</p>
+              <p>Hi there, ^500 I am <b>{{name}}</b>, ^250 a {{title}}.</p>
             </div>
-                        <h1 id='typed-content'></h1>
+            <h1 id='typed-content'></h1>
         </div>
       </div>
       <div class="row mx-auto">
-        <img
-          src="https://via.placeholder.com/170"
-          class="row img-thumbnail rounded-circle mx-auto"
-        />
+        <img src="https://via.placeholder.com/170" class="row img-thumbnail rounded-circle mx-auto" />
       </div>
       <br />
       <div class="row mx-auto">
@@ -49,7 +46,6 @@
         null        
       );      
     },
-    /* need to use mounted for any references to the compiled template ex. access DOM elements by id or class */
     mounted: function(){
       new Typed('#typed-content', {
         stringsElement: '#typed-source-string',
@@ -61,16 +57,9 @@
 </script>
 
 <style>
-  #hero-unit {
-    /* size of hero unit */
+  #hero-unit, #particles-bg {
     width: 100%;
     height: 24em;
-    @media (max-width: 755px) {
-      height: 27em !important;
-    }
-    @media (max-width: 450px) {
-      height: 30em !important;
-    }
   }
 
   #particles-bg {
@@ -79,30 +68,27 @@
     background: linear-gradient(-45deg, #c44d58, #8d62bc, #3e92d8, #9aebdb);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-
     filter: blur(1.5px);
     z-index: -1;
+  }
 
-    /* size of particles background */
-    width: 100%;
-    height: 23em;
-    @media (max-width: 755px) {
-      height: 26em !important;
-    }
-    @media (max-width: 450px) {
-      height: 30em !important;
+  /* display rules for responsive design of hero unit */
+  @media screen and (max-width:755px){
+    #hero-unit, #particles-bg{
+      height:27em !important
     }
   }
 
+  @media screen and (max-width:450px){
+    #hero-unit, #particles-bg{
+      height:31em !important
+    }
+  }
+
+  /* animation for background position */
   @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 </style>
