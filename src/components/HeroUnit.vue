@@ -1,6 +1,6 @@
 <template>
   <div id="hero-unit">
-    <div id="particles-bg"></div>
+    <div id="particles-bg" class='dynamic-backlit-bg'></div>
     <br />
     <div class="d-flex flex-column">
       <div class="row mx-auto">
@@ -37,7 +37,6 @@
   import Typed from 'typed.js'
 
   export default {
-    name: "HeroUnit",
     props: ["name", "title", "linkedinURL", "githubURL", "email"],
     created: function() {
       window.particlesJS.load(
@@ -64,12 +63,7 @@
 
   #particles-bg {
     position: absolute;
-    background-repeat: no-repeat;
-    background: linear-gradient(-45deg, #c44d58, #8d62bc, #3e92d8, #9aebdb);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
     filter: blur(1.5px);
-    z-index: -1;
   }
 
   /* display rules for responsive design of hero unit */
@@ -83,12 +77,5 @@
     #hero-unit, #particles-bg{
       height:31em !important
     }
-  }
-
-  /* animation for background position */
-  @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 </style>

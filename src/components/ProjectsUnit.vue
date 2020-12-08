@@ -2,6 +2,7 @@
     <br><br>
     <div id='projects-unit' class='container text-light'>
         <h3><i class='fas fa-star'></i> Personal Projects</h3>
+        <br>
         <div class='d-flex flex-md-row flex-column'>
             <div class='card panel-bg shadow' v-for='project in projects' :key='project.name'>
                 <div class='card-body'>
