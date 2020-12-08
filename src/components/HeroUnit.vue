@@ -50,7 +50,7 @@
       new Typed('#typed-content', {
         stringsElement: '#typed-source-string',
         showCursor: false,
-        typeSpeed: 29,
+        typeSpeed: 30,
       });
     }
   };

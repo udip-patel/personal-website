@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "name": "Mobile Broadcasting App",
+            "isPublished" : false,
+            "description": "Minimalistic experimental app to allow promoters to directly broadcast messages to their 'fans' or 'subscribers'"
+        },
+        {
+            "name": "Stock Sorter",
+            "isPublished" : false,
+            "description": "Web application to gather information on public companies via free stock APIs and find undervalued tickers based on a set of considerations"
+        },
+        {
+            "name": "Godot Games",
+            "isPublished": false,
+            "description": "Creating/Refining game concepts and components using Godot, a very powerful, simple framework"
+        }
+    ]
+}

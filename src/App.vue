@@ -1,16 +1,20 @@
 <template>
   <HeroUnit name="Udip Patel" title="Software Developer" linkedinURL="https://www.linkedin.com/in/udippatel/" githubURL="https://github.com/udip-patel" email="patel.udip@gmail.com"></HeroUnit>
   <ToolsUnit></ToolsUnit>
+  <ProjectsUnit></ProjectsUnit>
+  <FooterUnit></FooterUnit>
 </template>
 
 <script>
 import HeroUnit from './components/HeroUnit.vue'
 import ToolsUnit from './components/ToolsUnit.vue'
+import ProjectsUnit from './components/ProjectsUnit.vue'
+import FooterUnit from './components/FooterUnit.vue'
 
 export default {
   name: 'App',
   components: {
-    HeroUnit, ToolsUnit
+    HeroUnit, ToolsUnit, ProjectsUnit, FooterUnit
   }
 }
 </script>
@@ -23,7 +27,7 @@ body{
 
 .panel-bg{
   background: #171717 !important;
-  border: solid 0.25px #454545;
+  border: solid 0.25px #454545 !important;
 }
 
 #app {
