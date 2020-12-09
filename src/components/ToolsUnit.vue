@@ -1,6 +1,7 @@
 <template>
     <br><br>
     <div id='tools-unit' class='container'>
+        <h3><i class='fas fa-toolbox'></i> Tools and Frameworks</h3>
         <div class='row mx-auto panel-bg shadow'>
             <img class='tool-img' v-for='tool in tools' :key='tool.name' :src='`assets/logos/${tool.image}`' data-toggle='tooltip' data-placement='bottom' :title='tool.name' />
         </div>

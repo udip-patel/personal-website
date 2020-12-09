@@ -23,12 +23,12 @@ export default {
   font-family: 'Nunito', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #c7c7c7;
 }
 
 body{
   margin:0px;
-  background: #242424 !important;
+  background: #2e2e2e !important;
 }
 
 .transparent-1{
@@ -39,6 +39,7 @@ body{
 .panel-bg{
   background: #171717 !important;
   border: solid 0.25px #454545 !important;
+  border-radius:5px !important;
 }
 
 /* 'moving', blurred gradient background */

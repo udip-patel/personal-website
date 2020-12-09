@@ -12,11 +12,11 @@
         </div>
       </div>
       <div class="row mx-auto">
-        <img src="https://via.placeholder.com/170" class="row img-thumbnail rounded-circle mx-auto" />
+        <img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/45.png" class="row img-thumbnail rounded-circle mx-auto" />
       </div>
       <br />
       <div class="row mx-auto">
-        <div class="btn-group shadow" role="group">
+        <div class="btn-group transparent-1 shadow" role="group">
           <a class="btn btn-light" :href=linkedinURL target="_blank" data-toggle="tooltip" title="LinkedIn">
             <b><i class="fab fa-linkedin"></i></b>
           </a>

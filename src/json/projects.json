@@ -1,19 +1,28 @@
 {
     "data": [
         {
-            "name": "Mobile Broadcasting App",
+            "name": "Channel Mobile App",
             "isPublished" : false,
-            "description": "Minimalistic experimental app to allow promoters to directly broadcast messages to their 'fans' or 'subscribers'"
+            "description": "Experimental app to allow users to directly broadcast messages to a set of 'subscribers'",
+            "icon": "mobile_app_icon.png",
+            "icon_border_color": "#1d8e96",
+            "link": ""
         },
         {
             "name": "Stock Sorter",
             "isPublished" : false,
-            "description": "Web application to gather information on public companies via free stock APIs and find undervalued tickers based on a set of considerations"
+            "description": "Web app using free stock APIs to gather financial data and sort companies",
+            "icon": "stock_icon.png",
+            "icon_border_color": "#0078d4",
+            "link": ""
         },
         {
             "name": "Godot Games",
             "isPublished": false,
-            "description": "Creating/Refining game concepts and components using Godot, a very powerful, simple framework"
+            "description": "Learning to create games with Godot, a simple, but very powerful framework",
+            "icon": "game_icon.png",
+            "icon_border_color": "#969696",
+            "link": ""
         }
     ]
 }

@@ -14,8 +14,7 @@
     "particles.js": "^2.0.0",
     "popper.js": "^1.16.1",
     "typed.js": "^2.0.11",
-    "vue": "^3.0.0",
-    "vue-pose": "^0.5.1"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
