@@ -56,12 +56,19 @@
     }
     .icon-container{
         padding-left:0.5em;
-        filter:blur(0.7px);
+        filter:blur(0.4px);
     }
     .icon-img{
         width:100px;
         height:100px;
         margin-top:1em;
         margin-left:0.5em;
+    }
+
+    /* remove padded-row when in smaller device */
+    @media screen and (max-width:755px){
+        .padded-row{
+            padding:0;
+        }
     }
 </style>

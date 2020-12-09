@@ -4,7 +4,6 @@ VueJS SPA which uses:
 
 - particles.js
 - typed.js
-- pose animation lib (popmotion)
 - bootstrap
 - font awesome
 
