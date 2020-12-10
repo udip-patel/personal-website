@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="row mx-auto">
-        <img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/45.png" class="row img-thumbnail rounded-circle mx-auto" />
+        <img src="/assets/profile.png" class="row profile-img img-thumbnail rounded-circle mx-auto" />
       </div>
       <br />
       <div class="row mx-auto">
@@ -64,6 +64,10 @@
   #particles-bg {
     position: absolute;
     filter: blur(1.5px);
+  }
+
+  .profile-img{
+    width:185px;
   }
 
   /* display rules for responsive design of hero unit */
