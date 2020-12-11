@@ -5,7 +5,7 @@
     </div>
     <div id='projects-unit' class='container-fluid'>
         <div class='d-flex flex-md-row flex-column padded-row'>
-            <div v-for='project in projects' :key='project.name' class='col'>
+            <div v-for='project in projects' :key='project.name' class='col project-card'>
                 <div class='card panel-bg shadow'>
                     <div class='row g-0'>
                         <div class='col-xl-3'>
@@ -81,10 +81,17 @@
         margin-left:0.5em;
     }
 
-    /* remove padded-row when in smaller device */
-    @media screen and (max-width:755px){
+    /* in smaller devices, no padding for padded-row required since it will be displayed as col instead 
+        but, the project-card will need some padding on the bottom to space out each card
+    */
+    @media screen and (max-width:767px){
         .padded-row{
-            padding:0;
+            padding:0
+        }
+
+        .project-card{
+            padding-bottom:1em;
+            text-align: left;
         }
     }
 </style>

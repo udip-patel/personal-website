@@ -52,6 +52,19 @@ export default {
 </script>
 
 <style>
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+body{
+  margin:0px;
+  background: #2e2e2e !important;
+}
+
 #app {
   font-family: 'Nunito', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -59,10 +72,6 @@ export default {
   color: #c7c7c7;
 }
 
-body{
-  margin:0px;
-  background: #2e2e2e !important;
-}
 .main-content{
   display:flex;
   min-height: 100vh;
@@ -128,4 +137,10 @@ body{
   border-bottom-color: #3e92d8;
   animation: spinner .8s ease infinite;
 }
+ /* in small devices, spinner needs to be re-aligned to center */
+ @media screen and (max-width:576px){
+   .spinner:before{
+     left:40%;
+   }
+ }
 </style>
