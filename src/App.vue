@@ -1,19 +1,52 @@
 <template>
-  <HeroUnit name="Udip Patel" title="Software Developer" linkedinURL="https://www.linkedin.com/in/udippatel/" githubURL="https://github.com/udip-patel" email="patel.udip@gmail.com"></HeroUnit>
-  <ToolsUnit></ToolsUnit>
-  <ProjectsUnit></ProjectsUnit>
-  <FooterUnit></FooterUnit>
+  <div v-show='!isContentLoaded'>
+    <div class='spinner'></div>
+  </div>
+  <transition name='smoothFadeIn'>
+    <div class='main-content' v-show='isContentLoaded'>
+      <HeroUnit :isLoaded="this.isContentLoaded" @component-loaded="this.onComponentLoaded" 
+        name="Udip Patel" title="Software Developer" linkedinURL="https://www.linkedin.com/in/udippatel/" 
+        githubURL="https://github.com/udip-patel" email="patel.udip@gmail.com">
+      </HeroUnit>
+      <ToolsUnit @component-loaded="this.onComponentLoaded"></ToolsUnit>
+      <ProjectsUnit @component-loaded="this.onComponentLoaded"></ProjectsUnit>
+      <br><br><br><br><br>
+      <!-- footer will stick to bottom of page due to: mt-auto & flexbox style of main-content class !-->
+      <div class='dynamic-backlit-bg mt-auto'>
+        <footer class="py-4 flex-shrink-0 text-center">
+
+        </footer>
+      </div>
+    </div>
+  </transition>
+
 </template>
 
 <script>
 import HeroUnit from './components/HeroUnit.vue'
 import ToolsUnit from './components/ToolsUnit.vue'
 import ProjectsUnit from './components/ProjectsUnit.vue'
-import FooterUnit from './components/FooterUnit.vue'
+
 export default {
   name: 'App',
   components: {
-    HeroUnit, ToolsUnit, ProjectsUnit, FooterUnit
+    HeroUnit, ToolsUnit, ProjectsUnit
+  },
+  data(){
+    return{
+      isContentLoaded: false,
+      numComponentsToLoad: 3,
+      numComponentsLoaded: 0,
+    }
+  },
+  methods: {
+    //display page content ONLY after all components are loaded
+    onComponentLoaded() { 
+      this.numComponentsLoaded++;
+      if(this.numComponentsLoaded == this.numComponentsToLoad){
+        this.isContentLoaded = true;
+      }
+    }
   }
 }
 </script>
@@ -29,6 +62,11 @@ export default {
 body{
   margin:0px;
   background: #2e2e2e !important;
+}
+.main-content{
+  display:flex;
+  min-height: 100vh;
+  flex-direction:column;
 }
 
 .transparent-1{
@@ -49,12 +87,45 @@ body{
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     z-index: -1;
+    filter:blur(30px);
 }
 
-/* animation for background */
+
+.smoothFadeIn-enter-active {
+  animation: smoothFadeIn 2s;
+}
+
+
+/* animations */
+@keyframes smoothFadeIn {
+  0% { opacity: 0;  }
+  100% { opacity: 1; }
+}
+
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+/* spinner */
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #3e92d8;
+  border-bottom-color: #3e92d8;
+  animation: spinner .8s ease infinite;
 }
 </style>

@@ -10,7 +10,7 @@
                     <div class='row g-0'>
                         <div class='col-xl-3'>
                             <div class='icon-container'>
-                                <img :src='`assets/icons/${project.icon}`' class='icon-img rounded-circle' :style="{ 'border': 'solid 4px ' + project.icon_border_color }" />
+                                <img @load='handleImageLoad' :src='`assets/icons/${project.icon}`' class='icon-img rounded-circle' :style="{ 'border': 'solid 4px ' + project.icon_border_color }" />
                             </div>
                         </div>
                         <div class='col-xl-9'>
@@ -42,7 +42,23 @@
     export default{
         data(){
             return{
-                projects:projectsData.data
+                projects:projectsData.data,
+                numImagesLoaded: 0
+            }
+        },
+        computed:{
+            numImagesToLoad: function(){
+                return this.projects.length;
+            }
+        },
+        emits: ['component-loaded'],
+        methods: {
+            //throw component loaded event after all images are loaded
+            handleImageLoad: function(){
+                this.numImagesLoaded++;
+                if(this.numImagesLoaded == this.numImagesToLoad){
+                    this.$emit('component-loaded');
+                }
             }
         }
     }

@@ -8,11 +8,13 @@ VueJS SPA which uses:
 - font awesome
 
 
-Page is made up of 4 vue components:
+Page is made up of 3 vue components:
 - Hero Unit
 - Tools Unit
 - Projects Unit
-- Footer
+
+Page will display a spinner until all images are loaded.
+Once images are loaded, will show the webpage
 
 ## Project setup
 ```

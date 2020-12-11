@@ -12,15 +12,15 @@
         </div>
       </div>
       <div class="row mx-auto">
-        <img src="/assets/profile.png" class="row profile-img img-thumbnail rounded-circle mx-auto" />
+        <img @load="handleImageLoad" src="/assets/profile.png" class="row profile-img img-thumbnail rounded-circle mx-auto" />
       </div>
       <br />
       <div class="row mx-auto">
-        <div class="btn-group transparent-1 shadow" role="group">
+        <div class="btn-group shadow" role="group">
           <a class="btn btn-light" :href=linkedinURL target="_blank" data-toggle="tooltip" title="LinkedIn">
             <b><i class="fab fa-linkedin"></i></b>
           </a>
-          <a class="btn btn-light" :href=githubURL target="_blank" data-toggle="tooltip" title="Github">
+          <a class="btn btn-dark" :href=githubURL target="_blank" data-toggle="tooltip" title="Github">
             <b><i class="fab fa-github"></i></b>
           </a>
           <a class="btn btn-light" :href="`mailto:${email}`" data-toggle="tooltip" title="Send me an email">
@@ -37,20 +37,39 @@
   import Typed from 'typed.js'
 
   export default {
-    props: ["name", "title", "linkedinURL", "githubURL", "email"],
-    created: function() {
-      window.particlesJS.load(
-        "particles-bg",
-        "/assets/particles-data.json",
-        null        
-      );      
+    props: ["isLoaded", "name", "title", "linkedinURL", "githubURL", "email"],
+    emits: ['component-loaded'],
+    watch: {
+      // when this component is loaded, it will be displayed, so start any animations
+      isLoaded: function(){
+        this.startAnimationsOnDisplay();
+      }
     },
-    mounted: function(){
-      new Typed('#typed-content', {
-        stringsElement: '#typed-source-string',
-        showCursor: false,
-        typeSpeed: 30,
-      });
+    methods: {
+      //throw component loaded event after all content is loaded
+      handleImageLoad: function(){
+        this.$emit('component-loaded');
+      },
+      //trigger particles js library to display, once particles displayed, call typed.js function
+      loadParticlesJS: function(){
+        window.particlesJS.load(
+          "particles-bg",
+          "/assets/particles-data.json",
+          this.renderTypedJSText 
+        );   
+      },
+      //trigger typed.js text to display
+      renderTypedJSText: function(){
+        new Typed('#typed-content', {
+          stringsElement: '#typed-source-string',
+          showCursor: false,
+          typeSpeed: 30,
+        });
+      },
+      //start rendering special animations
+      startAnimationsOnDisplay: function(){
+        this.loadParticlesJS();  
+      }
     }
   };
 </script>
@@ -63,9 +82,11 @@
 
   #particles-bg {
     position: absolute;
-    filter: blur(1.5px);
   }
 
+  #typed-source-string{
+    display:none !important;
+  }
   .profile-img{
     width:185px;
   }
