@@ -101,11 +101,11 @@ footer{
 /* 'moving', blurred gradient background */
 .dynamic-backlit-bg{
     background-repeat: no-repeat;
-    background: linear-gradient(-45deg, #c44d58, #8d62bc, #3e92d8, #9aebdb);
+    background: linear-gradient(-45deg, #de6161, #8d62bc, #3e92d8, #159957);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     z-index: -1;
-    filter:blur(30px);
+    filter:blur(27px);
 }
 
 .spanning-img{

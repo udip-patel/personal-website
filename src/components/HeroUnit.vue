@@ -1,7 +1,7 @@
 <template>
   <div id="hero-unit">
     <div id="particles-bg" class='dynamic-backlit-bg'>
-      <img class='spanning-img vertically-centered' src='/assets/logos/logo-backdrop.png'>
+      <div class='sliding-img vertically-placed'></div>
     </div>
     <br />
     <div class="d-flex flex-column">
@@ -82,21 +82,40 @@
     height: 24em;
   }
 
-  #particles-bg {
-    position: absolute;
-  }
-
   #typed-source-string{
     display:none !important;
   }
+
+  #particles-bg {
+    position: absolute;
+    overflow: hidden;
+  }
+
   .profile-img{
     width:185px;
     opacity:0.95;
   }
 
-  .vertically-centered{
+  .vertically-placed{
     position: absolute;
-    top: 40%;
+    top: 60%;
+  }
+
+  .sliding-img{
+    background: url('/assets/logos/long-logo-wave-backdrop.png') repeat-x;
+    animation: slide 45s linear infinite;
+    height:150px;
+    width: 9258px;
+  }
+
+
+  @keyframes slide{
+    0%{
+      transform: translate3d(0, 0, 0);
+    }
+    100%{
+      transform: translate3d(-3086px, 0, 0);
+    }
   }
 
   /* display rules for responsive design of hero unit */

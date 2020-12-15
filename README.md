@@ -1,5 +1,8 @@
 # Personal Website - v3
 
+[Link to Website](https://udip.ca)
+
+
 VueJS SPA which uses:
 
 - particles.js
@@ -15,6 +18,8 @@ Page is made up of 3 vue components:
 
 Page will display a spinner until all images are loaded.
 Once images are loaded, will show the webpage
+
+
 
 ## Project setup
 ```
