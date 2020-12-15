@@ -14,7 +14,7 @@
       <!-- footer will stick to bottom of page due to: mt-auto & flexbox style of main-content class !-->
       <div class='dynamic-backlit-bg mt-auto'>
         <footer class="py-4 flex-shrink-0 text-center">
-
+          <img class='spanning-img' src='/assets/logos/logo-backdrop.png'>
         </footer>
       </div>
     </div>
@@ -52,17 +52,22 @@ export default {
 </script>
 
 <style>
+/* make scrollbar transparent */
 html {
-  overflow:   scroll;
+  overflow:scroll;
 }
 ::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent; 
 }
 
 body{
   margin:0px;
   background: #2e2e2e !important;
+}
+
+footer{
+  height:100px;
 }
 
 #app {
@@ -89,6 +94,10 @@ body{
   border-radius:5px !important;
 }
 
+.shadowed{
+  box-shadow:0 6.4px 14.4px 0 rgba(255,255,255,0.132),0 1.2px 3.6px 0 rgba(255,255,255,0.108)!important
+}
+
 /* 'moving', blurred gradient background */
 .dynamic-backlit-bg{
     background-repeat: no-repeat;
@@ -99,6 +108,10 @@ body{
     filter:blur(30px);
 }
 
+.spanning-img{
+  width: 100%;
+  height:150px;
+}
 
 .smoothFadeIn-enter-active {
   animation: smoothFadeIn 2s;

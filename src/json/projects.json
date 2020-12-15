@@ -19,7 +19,7 @@
         {
             "name": "Godot Games",
             "isPublished": false,
-            "description": "Learning to create games with Godot, a simple, but very powerful framework",
+            "description": "Learning to create games with Godot, a simple, but incredibly powerful framework",
             "icon": "game_icon.png",
             "icon_border_color": "#969696",
             "link": ""

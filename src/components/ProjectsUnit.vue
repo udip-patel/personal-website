@@ -6,7 +6,7 @@
     <div id='projects-unit' class='container-fluid'>
         <div class='d-flex flex-md-row flex-column padded-row'>
             <div v-for='project in projects' :key='project.name' class='col project-card'>
-                <div class='card panel-bg shadow'>
+                <div class='card panel-bg shadowed'>
                     <div class='row g-0'>
                         <div class='col-xl-3'>
                             <div class='icon-container'>

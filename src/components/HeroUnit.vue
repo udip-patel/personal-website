@@ -1,6 +1,8 @@
 <template>
   <div id="hero-unit">
-    <div id="particles-bg" class='dynamic-backlit-bg'></div>
+    <div id="particles-bg" class='dynamic-backlit-bg'>
+      <img class='spanning-img vertically-centered' src='/assets/logos/logo-backdrop.png'>
+    </div>
     <br />
     <div class="d-flex flex-column">
       <div class="row mx-auto">
@@ -89,6 +91,12 @@
   }
   .profile-img{
     width:185px;
+    opacity:0.95;
+  }
+
+  .vertically-centered{
+    position: absolute;
+    top: 40%;
   }
 
   /* display rules for responsive design of hero unit */
