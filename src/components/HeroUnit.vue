@@ -6,7 +6,7 @@
     <br />
     <div class="d-flex flex-column">
       <div class="row mx-auto">
-        <div class="alert alert-info transparent-1 shadow">
+        <div class="alert alert-info transparent-1 shadow text-center">
             <div id='typed-source-string'>
               <p>Hi there, ^500 I am <b>{{name}}</b>, ^250 a {{title}}.</p>
             </div>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="row mx-auto">
-        <img @load="handleImageLoad" src="/assets/profile.png" class="row profile-img img-thumbnail rounded-circle mx-auto" />
+        <img @load="handleImageLoad" src="/assets/profile.jpg" class="row profile-img img-thumbnail rounded-circle mx-auto" />
       </div>
       <br />
       <div class="row mx-auto">
@@ -127,7 +127,7 @@
 
   @media screen and (max-width:450px){
     #hero-unit, #particles-bg{
-      height:31em !important
+      height:32em !important
     }
   }
 </style>

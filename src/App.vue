@@ -101,7 +101,7 @@ footer{
 /* 'moving', blurred gradient background */
 .dynamic-backlit-bg{
     background-repeat: no-repeat;
-    background: linear-gradient(-45deg, #de6161, #8d62bc, #3e92d8, #159957);
+    background: linear-gradient(-45deg, #f99949, #8d62bc, #3e92d8, #00F260);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     z-index: -1;
