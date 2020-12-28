@@ -1,6 +1,6 @@
-# Personal Website - v3
+# Personal Website 
 
-[Link to Website](https://udip.ca)
+[udip.ca](https://udip.ca)
 
 
 VueJS SPA which uses:
@@ -17,26 +17,9 @@ Page is made up of 3 vue components:
 - Projects Unit
 
 Page will display a spinner until all images are loaded.
-Once images are loaded, will show the webpage
 
+Once images are loaded, will show the webpage.
 
+All data is loaded from JSON & public assets folders.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+Deployed on Google Cloud with continuous deployment. When a new commit is added to this repository, an updated build is publlished.
